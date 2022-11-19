@@ -1,0 +1,39 @@
+CHIP Mult4{
+	IN in[16];
+	OUT out[16];
+	
+	PARTS:
+	HalfAdder(a=in[0], b=in[0], sum=sum0, carry=carry1);
+	FullAdder(a=carry1, b=in[1], c=in[1], sum=sum1, carry=carry2);
+	FullAdder(a=carry2, b=in[2], c=in[2], sum=sum2, carry=carry3);
+	FullAdder(a=carry3, b=in[3], c=in[3], sum=sum3, carry=carry4);
+	FullAdder(a=carry4, b=in[4], c=in[4], sum=sum4, carry=carry5);
+	FullAdder(a=carry5, b=in[5], c=in[5], sum=sum5, carry=carry6);
+	FullAdder(a=carry6, b=in[6], c=in[6], sum=sum6, carry=carry7);
+	FullAdder(a=carry7, b=in[7], c=in[7], sum=sum7, carry=carry8);
+	FullAdder(a=carry8, b=in[8], c=in[8], sum=sum8, carry=carry9);
+	FullAdder(a=carry9, b=in[9], c=in[9], sum=sum9, carry=carry10);
+	FullAdder(a=carry10, b=in[10], c=in[10], sum=sum10, carry=carry11);
+	FullAdder(a=carry11, b=in[11], c=in[11], sum=sum11, carry=carry12);
+	FullAdder(a=carry12, b=in[12], c=in[12], sum=sum12, carry=carry13);
+	FullAdder(a=carry13, b=in[13], c=in[13], sum=sum13, carry=carry14);
+	FullAdder(a=carry14, b=in[14], c=in[14], sum=sum14, carry=carry15);
+	FullAdder(a=carry15, b=in[15], c=in[15], sum=sum15, carry=carry16);
+	
+	FullAdder(a=carry16, b=sum0, c=sum0, sum=out[0], carry=carry17);
+	FullAdder(a=carry17, b=sum1, c=sum1, sum=out[1], carry=carry18);
+	FullAdder(a=carry18, b=sum2, c=sum2, sum=out[2], carry=carry19);
+	FullAdder(a=carry19, b=sum3, c=sum3, sum=out[3], carry=carry20);
+	FullAdder(a=carry20, b=sum4, c=sum4, sum=out[4], carry=carry21);
+	FullAdder(a=carry21, b=sum5, c=sum5, sum=out[5], carry=carry22);
+	FullAdder(a=carry22, b=sum6, c=sum6, sum=out[6], carry=carry23);
+	FullAdder(a=carry23, b=sum7, c=sum7, sum=out[7], carry=carry24);
+	FullAdder(a=carry24, b=sum8, c=sum8, sum=out[8], carry=carry25);
+	FullAdder(a=carry25, b=sum9, c=sum9, sum=out[9], carry=carry26);
+	FullAdder(a=carry26, b=sum10, c=sum10, sum=out[10], carry=carry27);
+	FullAdder(a=carry27, b=sum11, c=sum11, sum=out[11], carry=carry28);
+	FullAdder(a=carry28, b=sum12, c=sum12, sum=out[12], carry=carry29);
+	FullAdder(a=carry29, b=sum13, c=sum13, sum=out[13], carry=carry30);
+	FullAdder(a=carry30, b=sum14, c=sum14, sum=out[14], carry=carry31);
+	FullAdder(a=carry31, b=sum15, c=sum15, sum=out[15], carry=carryy);
+}

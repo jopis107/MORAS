@@ -1,0 +1,10 @@
+CHIP B {
+	IN x, y, z;
+	OUT out;
+	
+	PARTS:
+	Not(in=y, out=Ny);
+	Not(in=z, out=Nz);
+	And(a=Ny, b=Nz, out=NyAndNz);
+	And(a=x, b=NyAndNz, out=out);
+}
