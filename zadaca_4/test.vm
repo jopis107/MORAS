@@ -1,0 +1,7 @@
+//pokretanje u VM
+function test.init 0
+push constant 5
+push constant 7
+add
+label WHILE
+goto WHILE
